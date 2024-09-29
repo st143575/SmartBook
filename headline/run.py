@@ -84,7 +84,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    clusters = json.load(open(os.path.join(args.output_dir, "output_clusters.json")))
+    clusters = json.load(open(os.path.join(args.input_dir, "output_clusters.json")))
     clusters = generate_headline(args, clusters)
     
     json.dump(clusters, open(os.path.join(args.output_dir, "output_headline.json"), "w"), indent=4)
